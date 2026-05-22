@@ -1,0 +1,250 @@
+<mxfile host="app.diagrams.net" pages="4">
+  <diagram id="page_trait" name="Trait">
+    <mxGraphModel dx="999" dy="490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Check»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;DifficultyLadder&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ stages: List&amp;lt;DifficultyStage&amp;gt;&lt;br/&gt;+ linkedTrait: Trait&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="96" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Boundary Domain»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Character&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ traits: List&amp;lt;Trait&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="96" width="260" x="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Trait&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ rank: Rank&lt;br&gt;+ &amp;lt;&amp;lt; composition &amp;gt;&amp;gt; difficultyLadder: DifficultyLadder&lt;br&gt;+ character: Character&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ makeCheck(dc, circumstance): CheckResult&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ toMeasure(type): Number&lt;br&gt;+ add(other, type): Rank&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 9px; color: rgb(102, 102, 102);&quot;&gt;&lt;i&gt;modifier = rank.value&lt;/i&gt;&lt;br&gt;&lt;i&gt;every trait has a difficultyLadder&lt;br&gt;&lt;/i&gt;&lt;i&gt;may be negative&lt;/i&gt;&lt;br&gt;&lt;i&gt;ranks must not be added directly — convert to measures first&lt;/i&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="180" width="260" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Measurement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ &amp;lt;&amp;lt; composition &amp;gt;&amp;gt; rankedMeasurements: List&amp;lt;RankedMeasurement&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ lookup(rank, type): RankedMeasurement&lt;br/&gt;+ rankFor(measure, type): Rank&lt;br/&gt;+ calculate(operatorRank, scaleRank, type): Number&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;one real-world value for every rank&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="134" width="260" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RankedMeasurement&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ type: MeasurementType&lt;br/&gt;+ rank: Rank&lt;br/&gt;+ value: Number&lt;br/&gt;+ units: String&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="340" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;MeasurementType&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ THROWING_DISTANCE&lt;br/&gt;+ TRAVEL_DISTANCE&lt;br/&gt;+ TRAVEL_TIME&lt;br/&gt;+ LIFTING&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="640" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.3;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;endSize=12;html=1;exitX=0.7;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;startArrow=open;startFill=0;endFill=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="7" style="endArrow=open;endSize=12;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.3;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="7" style="endArrow=open;endSize=12;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="615" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;dashed=1;html=1;entryX=-0.001;entryY=0.689;entryDx=0;entryDy=0;entryPerimeter=0;" target="5" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="390" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page_check" name="Check">
+    <mxGraphModel dx="2599" dy="490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Trait»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Trait&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ rank: Rank&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="96" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Check&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ trait: Trait&lt;br/&gt;+ dc: DifficultyClass&lt;br/&gt;+ circumstanceModifier: CircumstanceModifier&lt;br/&gt;+ isRoutine: Boolean&lt;br/&gt;+ - d20: D20&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ resolve(): CheckResult&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;isRoutine = true → d20 fixed at 10&lt;/i&gt;&lt;br/&gt;&lt;i&gt;shape: rollTotal vs dc.value&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="182" width="260" x="-10" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CheckResult&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ roll: Integer&lt;br&gt;+ rollTotal: Integer&lt;br&gt;+ isSuccess: Boolean&lt;br&gt;+ margin: Integer&lt;br&gt;+ check: Check&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ modifer:Integer&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="126" width="260" x="340" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DifficultyLadder&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ &amp;lt;&amp;lt; composition &amp;gt;&amp;gt; stages: List&amp;lt;DifficultyStage&amp;gt;&lt;br/&gt;+ linkedTrait: Trait&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ supplyDcToCheck(stage): DifficultyClass&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;every trait has a ladder&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="118" width="260" x="700" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OpposedCheck : Check&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ opposingTrait: Trait&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ resolve(): CheckResult&lt;br/&gt;+ - resolveTie(active, opposing): CheckResult&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;opposing rollTotal becomes DC&lt;/i&gt;&lt;br/&gt;&lt;i&gt;tie: higher rank wins; equal → d20 decides&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="134" width="260" x="-290" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TeamCheck : Check&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ &amp;lt;&amp;lt; aggregation &amp;gt;&amp;gt; helpers: List&amp;lt;Check&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ resolveHelpers(): CircumstanceModifier&lt;br/&gt;+ - calculateHelperModifier(s, f): CircumstanceModifier&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;each helper rolls vs DC 10&lt;/i&gt;&lt;br/&gt;&lt;i&gt;1 success → +2; 3+ → +5; 2+ failures → −2&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="134" width="260" x="-120" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DifficultyStage&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ descriptor: String&lt;br&gt;+ dc: DifficultyClass&lt;br&gt;+ taskDescription: String&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ supplyDc(): DifficultyClass&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="1160" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CircumstanceModifier&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ value: Integer&lt;br/&gt;+ traitScope: Trait&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;minor = ±2; major = ±5&lt;/i&gt;&lt;br/&gt;&lt;i&gt;when scoped, applies only to that trait&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="118" width="260" x="350" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;D20&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ roll(): Integer&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;result in [1, 20]&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="260" x="180" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="6" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.25;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="7" style="rounded=1;endArrow=block;endSize=16;endFill=0;html=1;exitX=0.5;exitY=0;entryX=0.75;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="8" style="rounded=1;endArrow=block;endSize=16;endFill=0;html=1;exitX=0.057;exitY=0.026;entryX=0.886;entryY=0.974;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" target="4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.518;entryY=0.092;entryDx=0;entryDy=0;entryPerimeter=0;" target="12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="261" y="520" />
+              <mxPoint x="310" y="520" />
+              <mxPoint x="310" y="558" />
+            </Array>
+            <mxPoint x="310" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.999;exitY=0.37;entryX=0.5;entryY=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;" target="9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=0;startSize=14;exitX=0.15;exitY=0;entryX=0;entryY=0.75;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.3;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=-0.005;exitY=0.465;entryX=0;entryY=0.25;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-190" y="305" />
+              <mxPoint x="-190" y="740" />
+              <mxPoint x="40" y="740" />
+            </Array>
+            <mxPoint x="40" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.999;exitY=0.795;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="365" />
+              <mxPoint x="330" y="400" />
+            </Array>
+            <mxPoint x="330" y="400" as="sourcePoint" />
+            <mxPoint x="320" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.25;exitY=0;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="3" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.85;exitY=0.3;entryX=0;entryY=0.3;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="4" value="creates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;GradedCheckResult : CheckResult&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ degreesOfSuccess: Integer&lt;br/&gt;+ degreesOfFailure: Integer&lt;br/&gt;+ isCriticalSuccess: Boolean&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;bare success = 1 degree; +1 per 5 pts above DC&lt;/i&gt;&lt;br/&gt;&lt;i&gt;bare failure = 1 degree; +1 per 5 pts below DC&lt;/i&gt;&lt;br/&gt;&lt;i&gt;natural 20 → +1 degree of success&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="260" x="800" y="390" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page_condition" name="Condition">
+    <mxGraphModel dx="1311" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Boundary Domain»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;PowerEffect&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ resistanceTrait: Trait&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="96" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Boundary Domain»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Character&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ traits: List&amp;lt;Trait&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="96" width="260" x="920" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Condition&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ label: String&lt;br/&gt;+ gameModifier: GameModifier&lt;br/&gt;+ supersedes: Condition&lt;br/&gt;+ supersededBy: Condition&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="260" x="40" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;GameModifier&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ penaltyValue: Integer&lt;br/&gt;+ restrictionDescription: String&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="260" x="340" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ConditionSource&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ effect: PowerEffect&lt;br/&gt;+ other: String&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;source is PowerEffect or named string; not both&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="102" width="260" x="640" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CombinedCondition&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ name: String&lt;br/&gt;+ constituents: List&amp;lt;Condition&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="260" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ImposedCondition&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ conditionType: Condition&lt;br/&gt;+ imposingSource: ConditionSource&lt;br/&gt;+ activeStatus: Boolean&lt;br/&gt;+ suppressingCondition: ImposedCondition&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;suppressing set when parked by more-severe condition&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="134" width="260" x="340" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ImposedConditions&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ character: Character&lt;br/&gt;+ &amp;lt;&amp;lt; aggregation &amp;gt;&amp;gt; appliedConditions: List&amp;lt;ImposedCondition&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ applyCondition(source, condition): void&lt;br/&gt;+ - incomingSupersedes(existing, incoming): Boolean&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;different-source severe → park lesser inactive&lt;/i&gt;&lt;br/&gt;&lt;i&gt;active condition → gameModifier applied&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="150" width="260" x="640" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="4" style="endArrow=open;endSize=12;html=1;exitX=1;exitY=0.4;entryX=0;entryY=0.4;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=0;startSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0;exitY=0.2;entryX=0.7;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.7;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=diamond;endSize=12;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;endFill=1;startArrow=open;startFill=0;" target="3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="9" style="endArrow=none;html=1;startArrow=diamondThin;startFill=0;startSize=14;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page_boundary_domain" name="Boundary Domain">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Trait»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Trait&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ rank: Rank&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Check»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Check&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ trait: Trait&lt;br/&gt;+ dc: DifficultyClass&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="260" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Condition»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;ImposedConditions&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ appliedConditions: List&amp;lt;ImposedCondition&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="640" y="40" width="260" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i style=&quot;font-size:9px;color:#888;&quot;&gt;«from: Condition»&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Condition&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ label: String&lt;br/&gt;+ gameModifier: GameModifier&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;dashed=1;dashPattern=8 4;strokeColor=#999999;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="940" y="40" width="260" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PowerEffect : Trait&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ resistanceTrait: Trait&lt;br/&gt;+ &amp;lt;&amp;lt; aggregation &amp;gt;&amp;gt; ongoingTargets: List&amp;lt;Character&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ makeResistanceCheckForOngoingTargets(character, check): void&lt;br/&gt;+ conditionOnFailure(condition, degree): void&lt;br/&gt;+ end(character, conditions): void&lt;br/&gt;+ - removeConditionsImposedByThis(conditions): void&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;DC = effect rank + 10&lt;/i&gt;&lt;br/&gt;&lt;i&gt;condition-selection owned by Power module&lt;/i&gt;&lt;br/&gt;&lt;i&gt;on end — all conditions from this effect removed&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="260" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OngoingEffects&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ &amp;lt;&amp;lt; aggregation &amp;gt;&amp;gt; activeEffects: List&amp;lt;PowerEffect&amp;gt;&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ add(effect): void&lt;br/&gt;+ resist(effect, check): void&lt;br/&gt;+ endEffect(character, effect, conditions): void&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;resistance check each turn while active&lt;/i&gt;&lt;br/&gt;&lt;i&gt;clears only conditions this effect imposed&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Character&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ traits: List&amp;lt;Trait&amp;gt;&lt;br/&gt;+ &amp;lt;&amp;lt; composition &amp;gt;&amp;gt; imposedConditions: ImposedConditions&lt;br/&gt;+ &amp;lt;&amp;lt; composition &amp;gt;&amp;gt; ongoingEffects: OngoingEffects&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:10px;&quot;&gt;+ applyModifier(modifier: GameModifier): void&lt;br/&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;font-size:9px;color:#666;&quot;&gt;&lt;i&gt;enforcement owned by consuming module&lt;/i&gt;&lt;br/&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="640" y="300" width="260" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=block;endSize=16;endFill=0;html=1;exitX=0.25;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=none;html=1;startArrow=diamondThin;startFill=1;startSize=14;exitX=0;exitY=0.4;entryX=1;entryY=0.4;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;startArrow=diamondThin;startFill=0;startSize=14;exitX=1;exitY=0.6;entryX=0;entryY=0.7;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="endArrow=none;html=1;startArrow=diamondThin;startFill=0;startSize=14;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.25;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endSize=12;html=1;exitX=0.75;exitY=0;entryX=0.5;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
